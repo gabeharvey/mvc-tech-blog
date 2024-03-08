@@ -1,4 +1,4 @@
-// Packages Required for Application
+// Imports Required for Application
 const commentRoutes = require("./comment-routes");
 const postRoutes = require("./post-routes");
 const userRoutes = require("./user-routes");
