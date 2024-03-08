@@ -55,3 +55,17 @@ router.post("/login", async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+// This Function Allows User Log Out
+router.post("/logout", (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy (() => {
+            res.status(204).end();    
+        });
+    } else {
+        res.status(404).end();
+    }
+});
+
+// This Exports Router
+module.exports = router;
