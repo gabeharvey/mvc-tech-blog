@@ -46,3 +46,19 @@ router.post("/", withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+// This Function Updates Existing Post if User Authenticated
+router.put("/:id", withAuth, async (req, res) => {
+    try {
+        const updatedPost = await Post.update(req.body, {
+            where: { id: req.params.id },
+        });
+        if(!updatedPost) {
+            res.status(404).json({ message: "No Post Found." });
+            return;
+        }
+        res.status(200).json(updatedPost);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
