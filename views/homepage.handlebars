@@ -1,0 +1,19 @@
+<main class="container mt-7">
+    <h1 class="mb-3 text-gray">The Tech Blog Posts</h1>
+    <div class="row">
+        {{#each posts}}
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-header bg-success">
+                    <h2 class="card-title">
+                        <a href="/post/{{id}}" class="text-light">{{title}}</a>
+                    </h2>
+                </div>
+                <div class="card-body text-light">
+                    <p>Created by User: {{user.username}} On: {{format_date createdAt}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</main>
