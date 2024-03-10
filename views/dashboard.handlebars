@@ -1,0 +1,18 @@
+<main class="container mt-3">
+    <div class="row">
+        <div class="col-8">
+            <h1 class="mb-2">Tech Blog Dashboard</h1>
+            <a href="/newpost" class="btn btn-primary">Create New Tech Blog Post</a>
+        </div>
+    </div>
+    <br>
+    <h1 class="mb-2">Tech Blog Information:</h1>
+    {{#each posts}}
+    <div class="post-container post mb-2">
+        <h2><a href="/post/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
+        <p>Created By: {{user.username}} | On: {{format_date createdAt}}</p>
+        <a href="/editpost/{{id}}" class="btn btn-warning">Edit Blog Post</a>
+        <button class="btn btn-danger delete-post" data-post-id="{{id}}">Remove</button>
+    </div>
+    {{/each}}
+</main>
