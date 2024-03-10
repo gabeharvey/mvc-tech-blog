@@ -8,3 +8,14 @@ const eHandlebars = require("express-handlebars");
 const handles = eHandlebars.create({ helpers: require("./utils/helpers") });
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// This Initializes Session Middleware
+const sess = {
+    secret: "Super secret secret",
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore ({
+        db: sequelize,
+    }),
+};
