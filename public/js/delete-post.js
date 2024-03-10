@@ -10,3 +10,14 @@ const deletePost = async (post_id) => {
         alert("Delete Post Unsuccessful");
     }
 };
+
+// This Function Handles Deletion of Post
+const deletePostFunc = (event) => {
+    if (event.target.matches(".delete-post")) {
+        const post_id = event.target.getAttribute("data-post-id");
+        deletePost(post_id);
+    }
+};
+
+// Event Listener Added for Click
+document.addEventListener("click", deletePostFunc);
