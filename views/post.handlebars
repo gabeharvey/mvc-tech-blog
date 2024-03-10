@@ -1,0 +1,23 @@
+<main class="container mt-3">
+    <article>
+        <h1>{{title}}</h1>
+        <p>Blogger: {{user.username}} | On: {{format_date createdAt}}</p>
+        <p>{{content}}</p>
+    </article>
+    {{#if logged_in}}
+    <form class="new-techBlog-comment-form" class="mb-2">
+        <div class="mb-2">
+            <label for="comment" class="form-label">Add Your Comment:</label>
+            <textarea class="form-control" id="content-new-techBlog-comment" rows="2" placeholder="Please Add Your Comment Here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {{/if}}
+    <h2>Blog History</h2>
+    {{#each comments}}
+    <div class="comment mb-2">
+        <p>{{comment_text}}</p>
+        <p>By: {{user.username}} On: {{format_date createdAt}}</p>
+    </div>
+    {{/each}}
+</main>
