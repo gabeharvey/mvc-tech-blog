@@ -21,3 +21,28 @@ const editPost = async (event) => {
         }
     }
 };
+
+// This Function Deletes Post Information
+const deletePost = async (event) => {
+    event.preventDefault();
+    const response = await fetch(`/api/posts/${post_id}`, {
+        method: "DELETE",
+    });
+    if (response.ok) {
+        documentlocation.replace("/dashboard");
+    } else {
+        alert("Delete Post Unsuccessful.");
+    }
+};
+
+// This Confirms if Edit Post Button Exists on Webpage, if it Exists an Event Listener is Added
+const techBlogEditPostBtn = document.querySelector("#update-techBlog-post");
+if (techBlogEditPostBtn) {
+    techBlogEditPostBtn.addEventListener("click", editPost);
+};
+
+// This Confirms if Delete Post Button Exists on Webpage, if it Exists an Event Listener is Added
+const techBlogDeletePostBtn = document.querySelector("#delete-techBlog-post");
+if (techBlogDeletePostBtn) {
+    techBlogDeletePostBtn.addEventListener("click", deletePost);
+};
