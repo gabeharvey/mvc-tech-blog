@@ -21,6 +21,8 @@
 
 ## Credits
 
+Guidance Provided by AskBCS Learning Assistant: "Masi" (Username: mmasinga) 
+
 ## Screenshots
 
 ## Video
