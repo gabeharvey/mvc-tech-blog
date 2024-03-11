@@ -1,5 +1,5 @@
 // This Function Deletes Post
-const deletePost = async (post_id) => {
+const deleteP = async (post_id) => {
     const response = await fetch(`/api/posts/${post_id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -15,7 +15,7 @@ const deletePost = async (post_id) => {
 const deletePostFunc = (event) => {
     if (event.target.matches(".delete-post")) {
         const post_id = event.target.getAttribute("data-post-id");
-        deletePost(post_id);
+        deleteP(post_id);
     }
 };
 
