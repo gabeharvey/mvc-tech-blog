@@ -1,7 +1,7 @@
 // Packages Required
-const Comment = require("./comment");
-const Post = require("./post");
-const User = require("./user");
+const Comment = require("./Comment");
+const Post = require("./Post");
+const User = require("./User");
 
 // Establishes One to Many Relationship Between User and Post Models
 // Each User Can Have Multiple Posts
