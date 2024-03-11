@@ -21,7 +21,9 @@
 
 ## Credits
 
-Guidance Provided by AskBCS Learning Assistant: "Masi" (Username: mmasinga) 
+Guidance Provided by AskBCS Learning Assistant: "Masi" (Username: mmasinga)
+
+Guidance Provided by AskBCS Learning Assistant: "Chipo" (Username: cphiri)
 
 ## Screenshots
 

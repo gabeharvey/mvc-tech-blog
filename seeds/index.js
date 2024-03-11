@@ -7,9 +7,9 @@ const sequelize = require("../config/connection");
 // This Function Seeds Database
 const seedAll = async () => {
     await sequelize.sync ({ force: true });
-    await seedComments();
-    await seedPosts();
     await seedUsers();
+    await seedPosts();
+    await seedComments();
     process.exit(0);
 };
 
